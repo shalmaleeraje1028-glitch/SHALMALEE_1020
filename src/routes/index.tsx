@@ -185,7 +185,7 @@ function Nav() {
         </nav>
         <Magnetic>
           <a
-            href="https://drive.google.com/file/d/1b1LZefyG5h4FTtnHVR3RRVNh_dHAXYB1/view?usp=sharing"
+            href="https://drive.google.com/file/d/1yJ5XZwyi6xcg-XSUiuuGmlvrer2apQg7/view?usp=sharing"
             target="_blank" rel="noreferrer" data-cursor="download"
             className="rounded-full border border-foreground bg-foreground px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-medium text-background transition-colors hover:bg-accent hover:text-accent-foreground hover:border-accent"
           >
