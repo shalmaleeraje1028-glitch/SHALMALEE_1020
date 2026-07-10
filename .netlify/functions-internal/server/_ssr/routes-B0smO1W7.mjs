@@ -254,7 +254,7 @@ function Nav() {
 					}, h))
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Magnetic, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					href: "https://drive.google.com/file/d/1yJ5XZwyi6xcg-XSUiuuGmlvrer2apQg7/view?usp=sharing",
+					href: "https://drive.google.com/file/d/1lf-1ERCpvl-zlbObYlXa4w2N-KR3ZNUw/view?usp=sharing",
 					target: "_blank",
 					rel: "noreferrer",
 					"data-cursor": "download",

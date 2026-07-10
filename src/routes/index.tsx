@@ -9,8 +9,9 @@ import {
 } from "motion/react";
 import heroBlobs from "@/assets/vangogh-hero.jpg";
 import lajjaThumb from "@/assets/lajja-thumbnail.png";
+import favicon from "../assets/Shalmalee.png";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/")({ 
   head: () => ({
     meta: [
       { title: "Shalmalee Raje — UI/UX Developer" },
@@ -18,6 +19,13 @@ export const Route = createFileRoute("/")({
         name: "description",
         content:
           "The Museum of Shalmalee — a curated portfolio of UI/UX developer Shalmalee Raje.",
+      },
+    ],
+    links: [
+      {
+        rel: "icon",
+        href: favicon,
+        type: "image/png",
       },
     ],
   }),
@@ -279,7 +287,7 @@ function Nav() {
         </nav>
         <Magnetic>
           <a
-            href="https://drive.google.com/file/d/1yJ5XZwyi6xcg-XSUiuuGmlvrer2apQg7/view?usp=sharing"
+            href="https://drive.google.com/file/d/1lf-1ERCpvl-zlbObYlXa4w2N-KR3ZNUw/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             data-cursor="download"
