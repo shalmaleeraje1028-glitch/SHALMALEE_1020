@@ -40,19 +40,19 @@
 :root {
   --radius: 1rem;
   /* Van Gogh — Starry Night gallery palette */
-  --background: oklch(0.945 0.035 88);          /* aged parchment / cream canvas */
-  --foreground: oklch(0.22 0.05 265);           /* deep cobalt-ink */
+  --background: oklch(0.945 0.035 88); /* aged parchment / cream canvas */
+  --foreground: oklch(0.22 0.05 265); /* deep cobalt-ink */
   --card: oklch(0.97 0.028 88);
   --card-foreground: oklch(0.22 0.05 265);
   --popover: oklch(0.97 0.028 88);
   --popover-foreground: oklch(0.22 0.05 265);
-  --primary: oklch(0.34 0.16 265);              /* cobalt blue #1e3a8a-ish */
+  --primary: oklch(0.34 0.16 265); /* cobalt blue #1e3a8a-ish */
   --primary-foreground: oklch(0.96 0.04 90);
-  --secondary: oklch(0.42 0.08 155);            /* cypress green */
+  --secondary: oklch(0.42 0.08 155); /* cypress green */
   --secondary-foreground: oklch(0.96 0.04 90);
   --muted: oklch(0.9 0.03 88);
   --muted-foreground: oklch(0.42 0.05 260);
-  --accent: oklch(0.82 0.17 88);                /* wheat / ochre yellow */
+  --accent: oklch(0.82 0.17 88); /* wheat / ochre yellow */
   --accent-foreground: oklch(0.22 0.05 265);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0.003 248);
@@ -66,7 +66,8 @@
   --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  --shadow-soft: 0 30px 60px -30px color-mix(in oklab, var(--primary) 55%, transparent);
+  --shadow-soft: 0 30px 60px -30px
+    color-mix(in oklab, var(--primary) 55%, transparent);
   --shadow-glow: 0 0 80px color-mix(in oklab, var(--accent) 50%, transparent);
 }
 
@@ -103,9 +104,21 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     background-image:
-      radial-gradient(ellipse at 15% 10%, color-mix(in oklab, var(--accent) 22%, transparent) 0%, transparent 45%),
-      radial-gradient(ellipse at 90% 20%, color-mix(in oklab, var(--primary) 28%, transparent) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 100%, color-mix(in oklab, var(--secondary) 22%, transparent) 0%, transparent 55%);
+      radial-gradient(
+        ellipse at 15% 10%,
+        color-mix(in oklab, var(--accent) 22%, transparent) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 90% 20%,
+        color-mix(in oklab, var(--primary) 28%, transparent) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 50% 100%,
+        color-mix(in oklab, var(--secondary) 22%, transparent) 0%,
+        transparent 55%
+      );
     background-attachment: fixed;
   }
   ::selection {
@@ -115,56 +128,87 @@
 }
 
 @layer utilities {
-  .font-display { font-family: var(--font-display); font-optical-sizing: auto; }
-  .text-balance { text-wrap: balance; }
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
   .grain {
     position: relative;
   }
   .grain::after {
     content: "";
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     pointer-events: none;
     background-image:
-      radial-gradient(rgba(30,40,90,0.22) 1px, transparent 1px),
-      radial-gradient(rgba(200,160,40,0.15) 1px, transparent 1px);
-    background-size: 3px 3px, 7px 7px;
-    background-position: 0 0, 1px 2px;
+      radial-gradient(rgba(30, 40, 90, 0.22) 1px, transparent 1px),
+      radial-gradient(rgba(200, 160, 40, 0.15) 1px, transparent 1px);
+    background-size:
+      3px 3px,
+      7px 7px;
+    background-position:
+      0 0,
+      1px 2px;
     opacity: 0.35;
     mix-blend-mode: multiply;
   }
   .swirl {
     background-image:
-      repeating-radial-gradient(circle at 20% 30%, color-mix(in oklab, var(--primary) 18%, transparent) 0 2px, transparent 2px 22px),
-      repeating-radial-gradient(circle at 80% 70%, color-mix(in oklab, var(--accent) 22%, transparent) 0 2px, transparent 2px 26px);
+      repeating-radial-gradient(
+        circle at 20% 30%,
+        color-mix(in oklab, var(--primary) 18%, transparent) 0 2px,
+        transparent 2px 22px
+      ),
+      repeating-radial-gradient(
+        circle at 80% 70%,
+        color-mix(in oklab, var(--accent) 22%, transparent) 0 2px,
+        transparent 2px 26px
+      );
   }
   .brushstroke {
-    background: linear-gradient(100deg,
+    background: linear-gradient(
+      100deg,
       color-mix(in oklab, var(--accent) 55%, transparent) 0%,
       color-mix(in oklab, var(--accent) 90%, transparent) 40%,
-      color-mix(in oklab, var(--primary) 50%, transparent) 100%);
+      color-mix(in oklab, var(--primary) 50%, transparent) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .text-cream { color: var(--cream); }
+  .text-cream {
+    color: var(--cream);
+  }
   .marquee {
     animation: marquee 40s linear infinite;
   }
   @keyframes marquee {
-    to { transform: translateX(-50%); }
+    to {
+      transform: translateX(-50%);
+    }
   }
   .ticker {
     animation: ticker 18s linear infinite;
   }
   @keyframes ticker {
-    to { transform: translateX(-50%); }
+    to {
+      transform: translateX(-50%);
+    }
   }
   .float-slow {
     animation: floaty 9s ease-in-out infinite;
   }
   @keyframes floaty {
-    0%,100% { transform: translateY(0) rotate(0); }
-    50% { transform: translateY(-18px) rotate(3deg); }
+    0%,
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-18px) rotate(3deg);
+    }
   }
   .spin-slow {
     animation: spin 22s linear infinite;
