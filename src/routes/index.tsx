@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 import heroBlobs from "@/assets/vangogh-hero.jpg";
 import lajjaThumb from "@/assets/lajja-thumbnail.png";
-import favicon from "../assets/Shalmalee.png";
+import favicon from "../assets/Shalmalee.jpg";
 
 export const Route = createFileRoute("/")({ 
   head: () => ({
@@ -263,7 +263,7 @@ function Nav() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 flex-wrap gap-4">
         <a
           href="#top"
           data-cursor="entrance"
@@ -337,7 +337,7 @@ function Hero({ parallax }: { parallax: any }) {
           <Reveal delay={0.3} className="md:col-span-7">
             <p className="text-lg text-balance md:text-2xl leading-snug">
               UI/UX Developer I curate{" "}
-              <em className="text-accent not-italic font-semibold">
+              <em className=" not-italic font-semibold">
                 interfaces like exhibits
               </em>
               : researched, arranged with intent, and framed for the person
@@ -366,7 +366,7 @@ function Hero({ parallax }: { parallax: any }) {
             <a
               href="#work"
               data-cursor="tour"
-              className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 text-primary-foreground text-sm uppercase tracking-[0.2em] transition-shadow hover:shadow-[var(--shadow-soft)]"
+              className="group inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-primary-foreground text-sm uppercase tracking-[0.2em] transition-shadow hover:shadow-[var(--shadow-soft)]"
             >
               Begin the tour
               <span className="grid size-6 place-items-center rounded-full bg-primary-foreground/15 transition-transform group-hover:translate-x-1">
@@ -444,7 +444,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32"
+      className="relative mx-auto px-6 py-24 md:px-10 md:py-32"
     >
       <RoomHeader
         n="I"
@@ -639,51 +639,53 @@ const EXHIBITS: Exhibit[] = [
     medium: "Product · Marketing · Research",
     desc: "Most recent internship. Contributed to UX flows, marketing assets, and user-facing pages for a B2B analytics platform.",
     href: "https://synaptris.com/",
-    liveEmbed: true,
+    liveEmbed: false,
   },
-  {
-    id: "maddie",
-    no: "02",
-    title: "Maddie's Magical Moments",
-    role: "End-to-end Designer & Developer (Internship)",
-    year: "January 2026",
-    medium: "Website · Booking flow",
-    desc: "A full website built for a UK-based face-painting business — warm, playful, bookable.",
-    href: "https://maddiesmagicalmomentsfacepaint.co.uk/",
-    liveEmbed: true,
-  },
-  {
-    id: "craft",
-    no: "03",
-    title: "The Craft Village",
-    role: "Website Designer & Developer",
-    year: "Jan – Jul 2025",
-    medium: "E-commerce · Craft storytelling",
-    desc: "Built the full website for The Craft Village — a marketplace celebrating Indian artisans and handmade craft.",
-    href: "https://thecraftvillage.in/",
-    liveEmbed: true,
-  },
-  {
-    id: "vasu",
-    no: "04",
-    title: "Vasu Visuals",
-    role: "Contributing Web Designer / Developer",
-    year: "2022 – 2023",
-    medium: "Multiple client websites",
-    desc: "Contributed to a range of client website design and development projects across the Vasu Visuals studio.",
-    href: "https://linkedin.com/in/vasu-visuals-6192a5294",
-  },
-  {
-    id: "digitales",
-    no: "05",
-    title: "Digitales — College Figma Project",
-    role: "UI/UX Designer",
-    year: "College",
-    medium: "Figma prototype · UI system",
-    desc: "A full Figma design assignment — interactive prototype exploring layout, typography and premium editorial UI.",
-    href: "https://www.figma.com/proto/1CYfuXc2fFtT2doEhLSBce/FIGMA-FILE-ASSIGNMENT-_DIGITALES?node-id=16-40&page-id=0%3A1&t=uLYrHIyaW1qeK8eQ-1",
-    thumb: lajjaThumb,
-  },
+  // {
+  //   id: "maddie",
+  //   no: "02",
+  //   title: "Maddie's Magical Moments",
+  //   role: "End-to-end Designer & Developer (Internship)",
+  //   year: "January 2026",
+  //   medium: "Website · Booking flow",
+  //   desc: "A full website built for a UK-based face-painting business — warm, playful, bookable.",
+  //   href: "https://maddiesmagicalmomentsfacepaint.co.uk/",
+  //   liveEmbed: false,
+  // },
+  // {
+  //   id: "craft",
+  //   no: "03",
+  //   title: "The Craft Village",
+  //   role: "Website Designer & Developer",
+  //   year: "Jan – Jul 2025",
+  //   medium: "E-commerce · Craft storytelling",
+  //   desc: "Built the full website for The Craft Village — a marketplace celebrating Indian artisans and handmade craft.",
+  //   href: "https://thecraftvillage.in/",
+  //   liveEmbed: false,
+  // },
+  // {
+  //   id: "vasu",
+  //   no: "04",
+  //   title: "Vasu Visuals",
+  //   role: "Contributing Web Designer / Developer",
+  //   year: "2022 – 2023",
+  //   medium: "Multiple client websites",
+  //   desc: "Contributed to a range of client website design and development projects across the Vasu Visuals studio.",
+  //   href: "https://linkedin.com/in/vasu-visuals-6192a5294",
+  //   liveEmbed: false,
+  // },
+  // {
+  //   id: "Lajja",
+  //   no: "05",
+  //   title: " College Figma Project",
+  //   role: "UI/UX Designer",
+  //   year: "College",
+  //   medium: "Figma prototype · UI system",
+  //   desc: "A full Figma design assignment — interactive prototype exploring layout, typography and premium editorial UI.",
+  //   href: "https://www.figma.com/proto/1CYfuXc2fFtT2doEhLSBce/FIGMA-FILE-ASSIGNMENT-_DIGITALES?node-id=16-40&page-id=0%3A1&t=uLYrHIyaW1qeK8eQ-1",
+  //   // thumb: lajjaThumb,
+  //   liveEmbed: false,
+  // },
 ];
 
 function Projects() {
@@ -750,7 +752,7 @@ function Exhibit({ exhibit, flip }: { exhibit: Exhibit; flip: boolean }) {
                   />
                 ) : (
                   <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-primary to-accent">
-                    <span className="text-6xl font-bold uppercase tracking-tight text-background">
+                    <span className="text-lg text-sm-sm  font-bold uppercase tracking-tight text-background text-center">
                       {exhibit.title}
                     </span>
                   </div>
@@ -813,7 +815,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-primary text-primary-foreground grain"
+      className="relative overflow-hidden bg-foreground text-primary-foreground grain"
     >
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
         <div className="mb-14 flex items-center gap-6">
