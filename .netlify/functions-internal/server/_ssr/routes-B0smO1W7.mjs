@@ -207,10 +207,10 @@ function Portfolio() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Nav, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, { parallax: heroParallax }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Marquee, { items: [
-				"Room I · Foyer",
-				"Room II · Practice",
-				"Room III · Exhibits",
-				"Room IV · Correspondence"
+				"About",
+				"Tech Skills",
+				"Internship projects",
+				"Contact"
 			] }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(About, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Skills, {}),
@@ -242,9 +242,9 @@ function Nav() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
 					className: "hidden items-center gap-8 text-xs uppercase tracking-[0.25em] md:flex",
 					children: [
-						["I. Foyer", "#about"],
-						["II. Practice", "#skills"],
-						["III. Exhibits", "#work"],
+						["About", "#about"],
+						["Tech Skills", "#skills"],
+						["Internship projects", "#work"],
 						["IV. Contact", "#contact"]
 					].map(([l, h]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 						href: h,

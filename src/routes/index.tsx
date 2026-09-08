@@ -7,18 +7,18 @@ import {
   useSpring,
   AnimatePresence,
 } from "motion/react";
-import heroBlobs from "@/assets/vangogh-hero.jpg";
+import heroBlobs from "@/assets/bg.avif";
 import lajjaThumb from "@/assets/lajja-thumbnail.png";
 import favicon from "../assets/Shalmalee.jpg";
 
 export const Route = createFileRoute("/")({ 
   head: () => ({
     meta: [
-      { title: "Shalmalee Raje — UI/UX Developer" },
+      { title: "Shalmalee Raje — UI/UX Designer" },
       {
         name: "description",
         content:
-          "The Museum of Shalmalee — a curated portfolio of UI/UX developer Shalmalee Raje.",
+          "I use design to understand people and solve problems, tell stories and turn ideas into experiences worth remembering.",
       },
     ],
     links: [
@@ -230,10 +230,10 @@ function Portfolio() {
       <Hero parallax={heroParallax} />
       <Marquee
         items={[
-          "Room I · Foyer",
-          "Room II · Practice",
-          "Room III · Exhibits",
-          "Room IV · Correspondence",
+          "ABOUT ME",
+          "TECH SKILLS",
+          "INTERNSHIP PROJECTS",
+          "CONTACT",
         ]}
       />
       <About />
@@ -269,15 +269,15 @@ function Nav() {
           data-cursor="entrance"
           className="flex items-center gap-3 uppercase tracking-[0.2em] text-sm font-bold"
         >
-          <span className="inline-block size-2 rounded-full bg-accent" />
-          The Museum of Shalmalee
+          <span className="inline-block size-2 rounded-full bg-accent shadow-none" />
+          Shalmalee Raje
         </a>
         <nav className="hidden items-center gap-8 text-xs uppercase tracking-[0.25em] md:flex">
           {[
-            ["I. Foyer", "#about"],
-            ["II. Practice", "#skills"],
-            ["III. Exhibits", "#work"],
-            ["IV. Contact", "#contact"],
+            ["ABOUT ME", "#about"],
+            ["TECH SKILLS", "#skills"],
+            ["INTERNSHIP PROJECTS", "#work"],
+            ["CONTACT", "#contact"],
           ].map(([l, h]) => (
             <a key={h} href={h} data-cursor="enter" className="group relative">
               {l}
@@ -285,7 +285,7 @@ function Nav() {
             </a>
           ))}
         </nav>
-        <Magnetic>
+        {/* <Magnetic>
           <a
             href="https://drive.google.com/file/d/1lf-1ERCpvl-zlbObYlXa4w2N-KR3ZNUw/view?usp=sharing"
             target="_blank"
@@ -295,7 +295,7 @@ function Nav() {
           >
             Museum Guide ↓
           </a>
-        </Magnetic>
+        </Magnetic> */}
       </div>
     </header>
   );
@@ -321,13 +321,10 @@ function Hero({ parallax }: { parallax: any }) {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal>
-          <p className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.35em] text-muted-foreground">
-            <span className="h-px w-12 bg-foreground/40" /> Now Open · Est. 2026
-            · Free Admission
-          </p>
-        </Reveal>
-        <h1 className="relative text-[13vw] font-bold uppercase leading-[0.9] tracking-tight md:text-[9.5rem] text-cream drop-shadow-[0_6px_24px_rgba(15,23,66,0.55)]">
+        {/* <Reveal>
+          
+        </Reveal> */}
+        <h1 className="relative text-[13vw] font-bold uppercase leading-[0.9] tracking-tight md:text-[9.5rem] text-cream ">
           <SplitWord text="SHALMALEE" />
           <span className="block text-accent">
             <SplitWord text="RAJE." delay={0.4} />
@@ -336,12 +333,9 @@ function Hero({ parallax }: { parallax: any }) {
         <div className="mt-10 grid gap-10 md:grid-cols-12">
           <Reveal delay={0.3} className="md:col-span-7">
             <p className="text-lg text-balance md:text-2xl leading-snug">
-              UI/UX Developer I curate{" "}
-              <em className=" not-italic font-semibold">
-                interfaces like exhibits
-              </em>
-              : researched, arranged with intent, and framed for the person
-              walking through them.
+              <b className="text-[1.5rem] md:text-[2rem]">UI/UX /Brand Designer</b> 
+              <br/>Designing with purpose.Thinking Beyond pixels creating with Intent.
+          
             </p>
           </Reveal>
           <Reveal
@@ -349,13 +343,16 @@ function Hero({ parallax }: { parallax: any }) {
             className="md:col-span-4 md:col-start-9 flex flex-col items-start gap-2 self-end text-sm"
           >
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Museum Location
+              Location
             </span>
-            <span className="text-xl font-semibold">Pune, Maharashtra 🇮🇳</span>
+            <span className="text-xl font-semibold">Pune, Maharashtra, India </span>
+            <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+             Email
+            </span>
             <a
               href="mailto:shalmaleeraje1028@gmail.com"
-              data-cursor="email"
-              className="mt-3 underline-offset-4 hover:underline"
+              data-cursor="Email"
+              className=" underline-offset-4 hover:underline"
             >
               shalmaleeraje1028@gmail.com
             </a>
@@ -368,7 +365,7 @@ function Hero({ parallax }: { parallax: any }) {
               data-cursor="tour"
               className="group inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-primary-foreground text-sm uppercase tracking-[0.2em] transition-shadow hover:shadow-[var(--shadow-soft)]"
             >
-              Begin the tour
+              My Resume 
               <span className="grid size-6 place-items-center rounded-full bg-primary-foreground/15 transition-transform group-hover:translate-x-1">
                 →
               </span>
@@ -380,7 +377,7 @@ function Hero({ parallax }: { parallax: any }) {
               data-cursor="say hi"
               className="rounded-full border border-foreground/30 px-7 py-4 text-sm uppercase tracking-[0.2em] transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
             >
-              Guestbook
+              Let's Start a Conversation
             </a>
           </Magnetic>
         </div>
@@ -427,9 +424,7 @@ function RoomHeader({
         {n}
       </div>
       <div>
-        <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
-          Room {n}
-        </p>
+        
         <h2 className="mt-1 text-3xl font-bold uppercase tracking-tight md:text-5xl">
           {title}
         </h2>
@@ -448,23 +443,14 @@ function About() {
     >
       <RoomHeader
         n="I"
-        title="The Foyer"
-        sub="An introduction to the curator"
+        title="ABOUT ME"
+        sub="An introduction to the designer and brand designer."
       />
       <div className="grid gap-12 md:grid-cols-12">
         <Reveal className="md:col-span-8">
           <p className="text-2xl leading-snug md:text-4xl font-light">
-            I'm passionate about UI/UX because it lets me{" "}
-            <span className="text-primary font-semibold">
-              understand people
-            </span>{" "}
-            beyond the screen — researching behavior, finding quiet pain points,
-            and shaping digital spaces that feel
-            <span className="text-accent font-semibold">
-              {" "}
-              simple, meaningful, and human
-            </span>
-            .
+           I'm drawn to UI/UX because I love understanding what people need, even when they don’t say it. I enjoy uncovering quiet pain points, making sense of human behavior, and transforming those insights into digital experiences that feel intuitive, delightful, and meaningful. 
+            
           </p>
         </Reveal>
         <Reveal
@@ -472,12 +458,10 @@ function About() {
           className="md:col-span-4 border-l border-foreground/15 pl-6"
         >
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Wall Label
+          Beyond the Interface
           </p>
           <p className="mt-3 text-sm leading-relaxed">
-            Shalmalee Raje (b. Pune) is a UI/UX developer working at the
-            intersection of research, interface and code — treating every
-            product as a small exhibition.
+            I'm a UI/UX designer and brand designer based in Pune, Maharashtra. I have done my BFA Applied arts from MIT World Peace University, Pune. 
           </p>
         </Reveal>
       </div>
@@ -485,8 +469,8 @@ function About() {
       <Reveal delay={0.2}>
         <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            ["40+", "User interviews"],
-            ["05", "Live client sites"],
+            ["20+", "User interviews"],
+        
             ["03", "Internships"],
             ["∞", "Cups of chai"],
           ].map(([n, l]) => (
@@ -509,19 +493,21 @@ function About() {
 /* ---------- Skills with measuring bars ---------- */
 function Skills() {
   const tech: [string, number][] = [
-    ["Python", 90],
-    ["Figma", 90],
-    ["JavaScript", 80],
-    ["HTML / CSS", 80],
+    ["Adobe Illustrator", 100],
+    ["Figma", 95],
+    ["Photoshop", 95],
+    ["Miro", 95],["Visual Studio (HTML/CSS)",80],["AutoCAD",70]
   ];
   const soft = [
-    "User Research",
-    "Empathy-driven design",
-    "Design Thinking",
-    "Prototyping",
-    "Interaction Design",
-    "Visual Storytelling",
-  ];
+    "ChatGPT",
+    "Uizard Design",
+    "NotebookLM",
+    "AI studio",
+    "Ideogram",
+    "Lovable",
+    "Figma AI",
+  
+];
 
   return (
     <section
@@ -534,13 +520,11 @@ function Skills() {
             II
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] opacity-60">
-              Room II
-            </p>
+           
             <h2 className="mt-1 text-3xl font-bold uppercase tracking-tight md:text-5xl">
-              The Practice Room
+             Tech Skills
             </h2>
-            <p className="mt-1 text-sm opacity-60">Instruments & disciplines</p>
+            <p className="mt-1 text-sm opacity-60">Softwares and tools</p>
           </div>
         </div>
 
@@ -556,7 +540,7 @@ function Skills() {
 
           <div className="md:col-span-5">
             <p className="text-xs uppercase tracking-[0.3em] opacity-60">
-              Craft & Approach
+              AI Tools\
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {soft.map((s) => (
@@ -631,41 +615,53 @@ type Exhibit = {
 
 const EXHIBITS: Exhibit[] = [
   {
-    id: "synaptris",
+    id: "WiseLink",
     no: "01",
+    title: "Wise Link",
+    role: "UI/UX Designer",
+    year: "College",
+    medium: "Case Study",
+    desc: "Case Studies on WiseLink, a platform for connecting students with mentors and industry professionals.",
+    href: "https://drive.google.com/file/d/1Oi3UayyiN1R1_sFf9A-ix4Rb0kLLv-_P/view?usp=sharing",
+    // thumb: lajjaThumb,
+    liveEmbed: false,
+  },
+  {
+    id: "Synaptris",
+    no: "02",
     title: "Synaptris",
-    role: "UX & Marketing Intern",
-    year: "Feb – May 2026",
-    medium: "Product · Marketing · Research",
+    role: "UX Support Intern",
+    year: "Feb - June 2026",
+    medium: "Product · Research",
     desc: "Most recent internship. Contributed to UX flows, marketing assets, and user-facing pages for a B2B analytics platform.",
     href: "https://synaptris.com/",
     liveEmbed: false,
   },
   {
-    id: "maddie",
-    no: "02",
+    id: "Maddie",
+    no: "03",
     title: "Maddie's Magical Moments",
     role: "End-to-end Designer & Developer (Internship)",
     year: "January 2026",
     medium: "Website · Booking flow",
-    desc: "A full website built for a UK-based face-painting business — warm, playful, bookable.",
+    desc: "A full website built for a UK-based face-painting business warm, playful.",
     href: "https://maddiesmagicalmomentsfacepaint.co.uk/",
     liveEmbed: false,
   },
   {
-    id: "craft",
-    no: "03",
+    id: "Craft",
+    no: "04",
     title: "The Craft Village",
     role: "Website Designer & Developer",
     year: "Jan – Jul 2025",
     medium: "E-commerce · Craft storytelling",
-    desc: "Built the full website for The Craft Village — a marketplace celebrating Indian artisans and handmade craft.",
+    desc: "Built the full website for The Craft Village,A marketplace celebrating Indian artisans and handmade craft.",
     href: "https://thecraftvillage.in/",
     liveEmbed: false,
   },
   {
-    id: "vasu",
-    no: "04",
+    id: "Vasu Visuals",
+    no: "05",
     title: "Vasu Visuals",
     role: "Contributing Web Designer / Developer",
     year: "2022 – 2023",
@@ -676,12 +672,12 @@ const EXHIBITS: Exhibit[] = [
   },
   {
     id: "Lajja",
-    no: "05",
+    no: "06",
     title: " College Figma Project",
     role: "UI/UX Designer",
     year: "College",
     medium: "Figma prototype · UI system",
-    desc: "A full Figma design assignment — interactive prototype exploring layout, typography and premium editorial UI.",
+    desc: "Interactive prototype exploring layout,style, typography and premium UI.",
     href: "https://www.figma.com/proto/1CYfuXc2fFtT2doEhLSBce/FIGMA-FILE-ASSIGNMENT-_DIGITALES?node-id=16-40&page-id=0%3A1&t=uLYrHIyaW1qeK8eQ-1",
     // thumb: lajjaThumb,
     liveEmbed: false,
@@ -696,8 +692,8 @@ function Projects() {
     >
       <RoomHeader
         n="III"
-        title="The Exhibits"
-        sub="Selected works, hung chronologically"
+        title="INTERNSHIP PROJECTS"
+        sub="Live projects"
       />
       <div className="grid gap-16">
         {EXHIBITS.map((ex, i) => (
@@ -774,7 +770,7 @@ function Exhibit({ exhibit, flip }: { exhibit: Exhibit; flip: boolean }) {
         <div className="md:col-span-4">
           <div className="border-l-4 border-accent bg-card p-6 shadow-sm">
             <p className="text-xs font-mono uppercase tracking-[0.3em] text-muted-foreground">
-              Exhibit № {exhibit.no}
+              Project {exhibit.no}
             </p>
             <h3 className="mt-3 text-3xl font-bold uppercase leading-tight">
               {exhibit.title}
@@ -801,7 +797,7 @@ function Exhibit({ exhibit, flip }: { exhibit: Exhibit; flip: boolean }) {
               data-cursor="visit"
               className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold hover:text-accent"
             >
-              Visit exhibit <span>↗</span>
+              Visit Site <span>↗</span>
             </a>
           </div>
         </div>
@@ -823,18 +819,16 @@ function Contact() {
             IV
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] opacity-70">
-              Room IV
-            </p>
+            
             <h2 className="mt-1 text-3xl font-bold uppercase tracking-tight md:text-5xl">
-              The Guestbook
+              Contact ME
             </h2>
           </div>
         </div>
 
         <Reveal>
-          <h3 className="text-[11vw] font-bold uppercase leading-[0.9] md:text-[8rem]">
-            Let's build <span className="text-accent">something human.</span>
+          <h3 className="text-[11vw] font-bold uppercase leading-[0.9] md:text-[6rem]">
+            Got a problem to solve? <span className="text-accent">Let's talk.</span>
           </h3>
         </Reveal>
         <div className="mt-12 grid gap-10 md:grid-cols-12">
@@ -842,7 +836,7 @@ function Contact() {
             <Magnetic>
               <a
                 href="mailto:shalmaleeraje1028@gmail.com"
-                data-cursor="email"
+                data-cursor="Email"
                 className="inline-flex items-center gap-4 rounded-full bg-accent px-8 py-5 text-accent-foreground transition-shadow hover:shadow-[var(--shadow-glow)]"
               >
                 <span className="text-xl font-semibold">
@@ -857,7 +851,7 @@ function Contact() {
           <div className="md:col-span-5 space-y-4 self-end">
             <Row k="Phone" v="+91 99756 59251" />
             <Row k="Location" v="Pune, Maharashtra" />
-            <Row k="Availability" v="Open to UI/UX roles · 2026" />
+            <Row k="Availability" v="Open to UI/UX roles." />
           </div>
         </div>
       </div>
@@ -883,10 +877,10 @@ function Footer() {
     <footer className="border-t border-foreground/10 bg-background">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-4 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-10">
         <p className="text-sm uppercase tracking-[0.25em] font-bold">
-          Shalmalee Raje · UI/UX Developer
+          Shalmalee Raje · UI/UX Designer 
         </p>
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          © 2026 — The Museum closes at midnight.
+          2026
         </p>
       </div>
     </footer>
